@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Minesweeper</title>
+    <link rel="stylesheet" type="text/css" href="a2.css">
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="a2.js"></script>
+    <script type="text/javascript" src="adjacent.js"></script>
+    <script type="text/javascript" src="minesweeper.js"></script>
+    <script type="text/javascript" src="formValidation.js"></script>
+  </head>
+
+  <body>
+  	
+   	<div class="page-wrapper">
+    <h1>Minesweeper</h1>
+      <div id="setForm">
+          <form id="setup" action="">
+              <div class="inputNumber">
+                  <label>Number of Rows </label>
+                  <input type="text" id="row" autocomplete="off"/>
+                  <div id="rowError" class="error"> Number should between 8 to 30</div>
+              </div>
+              <div class="inputNumber">
+                  <label>Number of Columns </label>
+                  <input type="text" id="column" autocomplete="off"/>
+                  <div id="columnError" class="error"> Number should between 8 to 40</div>
+              </div>
+              <div class="inputNumber">
+                  <label>Number of Mines </label>
+                  <input type="text" id="mines" autocomplete="off"/>
+                  <div id="mineError" class="error"> Number should between 1 to the size of the minefield-1</div>
+              </div>
+              <div>
+                <input type="submit" class="startButton" value="Start New Game"/>
+              </div>
+          </form>
+          <h2>Instructions</h2>
+          <ul id="instruction">
+              <li>The number of rows should between 8 to 30</li>
+              <li>The number of columns should between 8 to 40</li>
+              <li>The number of mines should between 1 to the size of the minefield-1</li>
+              <li>Click "Start new game"</li>
+              <li>You can start a new game any time you want</li>
+          </ul>
+      </div>
+    </div>
+    <div class="minefieldArea">
+      <div id="flagDisplay">
+          <div id="flagLabel">Number of Mines Left </div>
+          <span class="space"></span>
+          <div id="numFlag"> </div> 
+      </div>
+      <div>
+          <table id="minefield"></table>
+      </div>
+       
+    </div>
+    
+  </body>
+</html>   
+
